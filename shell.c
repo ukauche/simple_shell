@@ -8,10 +8,10 @@
  */
 int main(int argc, char **argv)
 {
-	int mode = isatty(0), cnt = 0, builtin_stats = 0;
 	char *buff = NULL, cmmd, **args = NULL, *full_cmmd = NULL;
-	size_t buffer_size = 0;
 	ssize_t num = 0;
+	int mode = isatty(0), cnt = 0, builtin_stats = 0;
+	size_t buffer_size = 0;
 
 	errno = 0;
 	(void)argc;

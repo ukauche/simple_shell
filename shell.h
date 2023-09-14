@@ -27,6 +27,7 @@ int built_in(char **args, char *prog, char *buff);
 char **tokenize(char *strng);
 
 
-
+int external_Command(char *actual_command, char **argv);
+int mod(int argc, char **argv);
 
 #endif

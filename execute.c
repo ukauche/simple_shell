@@ -7,7 +7,7 @@
  * Return: Void.
  */
 
-int execs(char **args, char **argv);
+int execs(char **args, char **argv)
 {
 
 	int stats;

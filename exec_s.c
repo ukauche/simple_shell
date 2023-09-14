@@ -8,7 +8,7 @@
  * Return: Returns Void.
  */
 
-int exec_s(char **args, char **argv, char *cmmd);
+int exec_s(char **args, char **argv, char *cmmd)
 {
 	int stats;
 	pid_t pid;

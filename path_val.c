@@ -7,7 +7,7 @@
  * Return: Returns a pointer to string or NULL.
  */
 
-char *path_val(char *path, char *cmmd);
+char *path_val(char *path, char *cmmd)
 {
 	size_t leng = 0;
 	int indx = 0;

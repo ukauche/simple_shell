@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * put_char - Prints a character.
+ * put_char -This will Prints a character.
  * @x: Character to be printed.
- * Return: Returns an integer.
+ * Return: Returns integer.
  */
 
 int put_char(char x)

@@ -22,35 +22,28 @@ int main(int argc, char **argv)
 			write(1, "$ ", 2);
 		num = getline(&buff, &buffer_size, stdin);
 		if (num == -1)
-		{
-			free(buff);
-			exit(errno);
-		}
+		{free(buff);
+			exit(errno); }
 		check_buf(buff);
 		args = tokenize(buff);
 		if (args[0] == NULL)
-		{
-			free(args);
-			continue;
-		}
+		{free(args);
+			continue; }
 		if (access(args[0], X_OK) == -1)
-		{
-			builtin_stats = built_in(args, argv[0], buff);
+		{builtin_stats = built_in(args, argv[0], buff);
 			if (builtin_stats == 1)
 				continue;
 			full_cmmd = path_val(dup_path(), args[0]);
 			if (full_cmmd == NULL)
-			{
-				cmmd = (cnt + '0');
+			{cmmd = (cnt + '0');
 				error_msg(argv[0], cmmd, args[0]);
 				free(args);
 				errno = 127;
-				continue;
-			}
+				continue; }
 			exec_s(args, argv, full_cmmd);
-			continue;
-		}
+			continue; }
 		execs(args, argv);
 	}
 	return (errno);
 }
+
